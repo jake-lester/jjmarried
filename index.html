@@ -4,9 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to JJ Married</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-size: contain; /* Ensure the whole image fits the screen */
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .content {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+        }
+        a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to JJ Married!</h1>
-    <p><a href="/savethedate">Save the Date</a></p>
+    <div class="content">
+        <h1>Welcome to JJ Married!</h1>
+        <p>Here you will find all the information you need for our wedding. The landing page is a work in progress... stay tuned for updates!</p>
+        <p>For now, please check out our <a href="/savethedate">Save the Date</a> information.</p>
+    </div>
+    <script>
+        // Array of image filenames
+        const images = [
+            "0001A25B-7087-4B9A-A248-09A8E1920232.jpg",
+            "4ce5fbf2-88a1-46b2-a74c-717e9ef16a23.jpg",
+            "BB55D9F4-7BAF-430B-B777-36C0335EEAA0.jpg",
+            "ChristmasTree10.JPEG",
+            "ec7712a9-c63f-4a78-bc8b-15836503fe4a.jpg",
+            "IMG_0249.JPEG",
+            "IMG_0254.JPEG",
+            "IMG_0255.JPEG",
+            "IMG_0264.JPEG",
+            "IMG_0445.JPEG",
+            "IMG_1341.JPEG",
+            "IMG_1439.JPEG",
+            "IMG_1440.JPEG",
+            "IMG_1442.JPEG",
+            "IMG_1684.JPG",
+            "IMG_1687.JPG",
+            "IMG_3343_Original.JPG",
+            "IMG_8201.JPEG",
+            "IMG_8279.JPEG",
+            "JulJakeMeMinnawas5.JPEG",
+            "JulJakeMeMinnawas3.JPEG",
+            "JulJakeMeMinnawas4.JPEG",
+            "WestKillwithJulietteJake15.JPEG",
+            "WestKillwithJulietteJake16.JPEG",
+            "WestKillwithJulietteJake21.JPEG",
+            "WestKillwithJulietteJake23.JPEG"
+        ];
+
+        // Function to get a random image
+        function getRandomImage() {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            return images[randomIndex];
+        }
+
+        // Set random background image
+        document.body.style.backgroundImage = `url('images/shuffle/${getRandomImage()}')`;
+
+        // Function to adjust padding based on screen size
+        function adjustPadding() {
+            const content = document.querySelector('.content');
+            const windowHeight = window.innerHeight;
+            content.style.padding = `${Math.max(windowHeight * 0.05, 20)}px`;
+        }
+
+        // Adjust padding on load and resize
+        window.onload = adjustPadding;
+        window.onresize = adjustPadding;
+    </script>
 </body>
 </html>

@@ -11,6 +11,7 @@
             font-family: Arial, sans-serif;
             text-align: center;
             color: white;
+            position: relative;
         }
         .background {
             background-image: url('../images/engagement_0023-propose3-centered.png');
@@ -28,19 +29,79 @@
             padding: 20px;
             border-radius: 10px;
         }
+        .wave span {
+            display: inline-block;
+            animation: wave-animation 1s infinite;
+            animation-delay: calc(0.1s * var(--i));
+        }
+        @keyframes wave-animation {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
         a {
             color: white;
             text-decoration: underline;
+        }
+        .highlight-what {
+            color: lightpink;
+        }
+        .highlight-when {
+            color: lightgreen;
+        }
+        .highlight-where {
+            color: lightpink;
+        }
+        .highlight-why {
+            color: lightgreen;
+        }
+        .return-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .return-button a {
+            color: white;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <div class="background">
+        <button class="return-button"><a href="/">Return to homepage</a></button>
         <div class="text">
             <h1>Save the Date!</h1>
-            <p>We are getting married on Eepy</p>
-            <p>Where: <a href="https://g.co/kgs/TKJMuJJ" target="_blank">Thatcher State Park Visitor Center</a></p>
-            <p>More details to follow at jjmarried.com</p>
+            <p><span class="highlight-what">What:</span> Wedding</p>
+            <p><span class="highlight-when">When:</span>  
+                <span class="wave">
+                    <span style="--i:1;">J</span>
+                    <span style="--i:2;">u</span>
+                    <span style="--i:3;">l</span>
+                    <span style="--i:4;">y</span>
+                    <span style="--i:5;"> </span>
+                    <span style="--i:6;">1</span>
+                    <span style="--i:7;">2</span>
+                    <span style="--i:8;">t</span>
+                    <span style="--i:9;">h</span>
+                    <span style="--i:10;">,</span>
+                    <span style="--i:11;"> </span>
+                    <span style="--i:12;">2</span>
+                    <span style="--i:13;">0</span>
+                    <span style="--i:14;">2</span>
+                    <span style="--i:15;">5</span>
+                </span>
+            </p>
+            <p><span class="highlight-where">Where:</span> <a href="https://g.co/kgs/TKJMuJJ" target="_blank">Thatcher State Park Visitor Center</a></p>
+            <p><span class="highlight-why">Why:</span> Because we love eachother, silly!</p>
         </div>
     </div>
 </body>
