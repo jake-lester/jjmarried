@@ -1,0 +1,101 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+.background {
+    background-image: url('../images/engagement_0023-propose3-centered.png');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.text {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    font-size: 1em;
+}
+.wave-loop span,
+.wave-once span {
+    display: inline-block;
+    animation: wave-animation 1.5s;
+    animation-delay: calc(0.1s * var(--i));
+    animation-iteration-count: 1;
+}
+
+.sparkle span {
+    display: inline-block;
+    animation: sparkle-animation 3s infinite;
+}
+@keyframes wave-animation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+@keyframes sparkle-animation {
+    0%, 100% {
+        color: white;
+        text-shadow: none;
+    }
+    50% {
+        color: yellow;
+        text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+    }
+}
+a {
+    color: white;
+    text-decoration: underline;
+}
+.highlight-what, .highlight-where {
+    font-size: 1.2em;
+    color: lightpink;
+}
+.highlight-when, .highlight-why {
+    font-size: 1.2em;
+    color: lightgreen;
+}
+.return-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+}
+.return-button a {
+    color: white;
+    text-decoration: none;
+}
+.highlight-link a {
+    background-color: rgba(241, 240, 240, 0.5);
+    color: rgb(8, 8, 151);
+    text-decoration: underline;
+}
+@media (min-width: 600px) {
+    .text {
+        padding: 40px;
+        font-size: 1.5em;
+    }
+    .return-button {
+        padding: 15px 25px;
+        font-size: 1.2em;
+    }
+}
