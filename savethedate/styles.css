@@ -7,7 +7,7 @@ body, html {
     position: relative;
 }
 .background {
-    background-image: url('../images/engagement_0023-propose3-centered.png');
+    background-image: url('../assets/images/engagement_0023-propose3-centered.png');
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;

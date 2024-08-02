@@ -4,199 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Save the Date 🕊💓🎉</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
-        .background {
-            background-image: url('../images/engagement_0023-propose3-centered.png');
-            height: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 20px;
-        }
-        .text {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 20px;
-            width: 90%;
-            max-width: 600px;
-            font-size: 1em;
-        }
-        .wave-loop span,
-
-.wave-once span {
-    display: inline-block;
-    animation: wave-animation 1.5s infinite;
-    animation-delay: calc(2.1s * var(--i));
-}
-.wave-once {
-    animation-iteration-count: 1;
-}
-.sparkle span {
-    animation: wave-animation 1.5s 1, sparkle-animation 3s infinite;
-    animation-delay: calc(0.1s * var(--i)), 1.5s;
-}
-@keyframes wave-animation {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
-@keyframes sparkle-animation {
-    0%, 100% {
-        color: white;
-        text-shadow: none;
-    }
-    50% {
-        color: rgb(190, 117, 8);
-        text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
-    }
-}
-
-        a {
-            color: white;
-            text-decoration: underline;
-        }
-        .highlight-what, .highlight-where{
-            font-size: 1.2em;
-            color: lightpink;
-        }
-        .highlight-when, .highlight-why {
-            font-size: 1.2em;
-            color: lightgreen;
-        }
-        .return-button {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 1em;
-        }
-        .return-button a {
-            color: white;
-            text-decoration: none;
-        }
-        .highlight-link a {
-            background-color: rgba(241, 240, 240, 0.5);
-            color: rgb(8, 8, 151);
-            text-decoration: underline;
-        }
-        @media (min-width: 600px) {
-            .text {
-                padding: 40px;
-                font-size: 1.5em;
-            }
-            .return-button {
-                padding: 15px 25px;
-                font-size: 1.2em;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <audio id="background-music" loop autoplay>
+        <source src="../assets/audio/Bridal-chorus.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
     <div class="background">
         <button class="return-button"><a href="/">Return to homepage</a></button>
         <div class="text">
-            <span class="wave-loop" style="font-size: 1.7em;">
-                <span style="--i:1;">S</span>
-                <span style="--i:2;">e</span>
-                <span style="--i:3;">p</span>
-                <span style="--i:4;">t</span>
-                <span style="--i:5;">e</span>
-                <span style="--i:6;">m</span>
-                <span style="--i:7;">b</span>
-                <span style="--i:8;">e</span>
-                <span style="--i:9;">r</span>
-                <span style="--i:10;"> </span>
-                <span style="--i:11;">2</span>
-                <span style="--i:12;">0</span>
-                <span style="--i:13;">t</span>
-                <span style="--i:14;">h</span>
-                <span style="--i:15;">,</span>
-            </span> 
-            <br><br>
-            <span class="wave-once sparkle" style="font-size: 2em;">
-                <span style="--i:16;">2</span>
-                <span style="--i:17;">0</span>
-                <span style="--i:18;">2</span>
-                <span style="--i:19;">5</span>
-            </span>
-            
-        </p>
-
-            </h2>
+            <p>
+                <span class="wave-loop" style="font-size: 2em;">
+                    <span style="--i:1;">S</span>
+                    <span style="--i:2;">e</span>
+                    <span style="--i:3;">p</span>
+                    <span style="--i:4;">t</span>
+                    <span style="--i:5;">e</span>
+                    <span style="--i:6;">m</span>
+                    <span style="--i:7;">b</span>
+                    <span style="--i:8;">e</span>
+                    <span style="--i:9;">r</span>
+                    <span style="--i:10;"> </span>
+                    <span style="--i:11;">2</span>
+                    <span style="--i:12;">0</span>
+                    <span style="--i:13;">t</span>
+                    <span style="--i:14;">h</span>
+                    <span style="--i:15;">,</span>
+                </span>
+                <br><br>
+                <span class="wave-once sparkle" style="font-size: 2em;">
+                    <span style="--i:16;">2</span>
+                    <span style="--i:17;">0</span>
+                    <span style="--i:18;">2</span>
+                    <span style="--i:19;">5</span>
+                </span>
+            </p>
             <p><span class="highlight-what"><strong>What:</strong></span> Wedding</p>
-            <p><span class="highlight-when"><strong>When:</strong></span> Saturday, 09-20-2025</p>
-
+            <p><span class="highlight-when"><strong>When:</strong></span> Saturday</p>
             <p><span class="highlight-where"><strong>Where:</strong></span> <span class="highlight-link"><a href="https://www.google.com/maps/place/John+Boyd+Thacher+State+Park+Visitor+Center/@42.6547815,-74.0173019,15z/data=!4m6!3m5!1s0x89ddd80fef6c0033:0x4d51a47ab04d2281!8m2!3d42.6547815!4d-74.0173019!16s%2Fg%2F11g8gzqcf4?entry=ttu" target="_blank">Thatcher State Park</a></span></p>
-            <p><span class="highlight-why"><strong>Why:</strong></span> Because we love eachother, silly!</p>
+            <p><span class="highlight-why"><strong>Why:</strong></span> Because we love each other, silly!</p>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                document.querySelector('.wave-once').style.display = 'none';
+                document.querySelector('.sparkle').style.display = 'inline-block';
+            }, 1500);
+        });
+    </script>
 </body>
-</html>
-
-
-        a {
-            color: white;
-            text-decoration: underline;
-        }
-        .highlight-what, .highlight-where{
-            font-size: 1.2em;
-            color: lightpink;
-        }
-        .highlight-when, .highlight-why {
-            font-size: 1.2em;
-            color: lightgreen;
-        }
-        .return-button {
-            position: absolute;
-            top: 80px;
-            left: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 1em;
-        }
-        .return-button a {
-            color: white;
-            text-decoration: none;
-        }
-        .highlight-link a {
-            background-color: rgba(241, 240, 240, 0.5);
-            color: rgb(8, 8, 151);
-            text-decoration: underline;
-        }
-        @media (min-width: 600px) {
-            .text {
-                padding: 40px;
-                font-size: 1.5em;
-            }
-            .return-button {
-                padding: 15px 25px;
-                font-size: 1.2em;
-            }
-        }
-    </style>
-</head>
 </html>
